@@ -1,0 +1,14 @@
+﻿@model IEnumerable<TargetMvcApplication.Models.Record>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>列表</h2>
+@Html.ActionLink("创建","Create")
+<br/>
+@foreach (var record in Model)
+{
+    <p>@record.Id @record.Content</p>
+}

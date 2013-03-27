@@ -1,0 +1,13 @@
+﻿@model TargetMvcApplication.Models.Record
+
+@{
+    ViewBag.Title = "添加";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>添加</h2>
+@using (Html.BeginForm())
+{
+  @Html.TextBoxFor(record=>record.Content)
+    <input type="submit" value="保存"/>
+}
