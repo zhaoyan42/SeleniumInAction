@@ -68,11 +68,11 @@
   <ItemGroup>
     <Compile Include="Context\TargetMvcApplicationContext.cs" />
     <Compile Include="Controllers\ClearDatabaseController.cs" />
-    <Compile Include="Controllers\RecordController.cs" />
+    <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Record.cs" />
+    <Compile Include="Models\Class.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,13 +126,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Record\Index.cshtml" />
+    <Content Include="Views\Class\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Record\Create.cshtml" />
+    <Content Include="Views\Class\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ClearDatabase\Index.cshtml" />

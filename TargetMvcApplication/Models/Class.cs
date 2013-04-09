@@ -5,9 +5,9 @@ using System.Web;
 
 namespace TargetMvcApplication.Models
 {
-    public class Record
+    public class Class
     {
         public int Id { get; set; }
-        public string Content { get; set; }
+        public string Name { get; set; }
     }
 }

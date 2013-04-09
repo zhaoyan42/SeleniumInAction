@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TargetMvcApplication.Models.Record>
+﻿@model IEnumerable<TargetMvcApplication.Models.Class>
 
 @{
     ViewBag.Title = "title";
@@ -10,5 +10,5 @@
 <br/>
 @foreach (var record in Model)
 {
-    <p>@record.Id @record.Content</p>
+    <p>@record.Id @record.Name</p>
 }

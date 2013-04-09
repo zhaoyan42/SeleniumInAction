@@ -5,6 +5,6 @@ namespace TargetMvcApplication.Context
 {
     public class TargetMvcApplicationContext : DbContext 
     {
-        public DbSet<Record> Records { get; set; } 
+        public DbSet<Class> Classes { get; set; } 
     }
 }

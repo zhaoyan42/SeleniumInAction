@@ -1,4 +1,4 @@
-﻿@model TargetMvcApplication.Models.Record
+﻿@model TargetMvcApplication.Models.Class
 
 @{
     ViewBag.Title = "添加";
@@ -8,6 +8,6 @@
 <h2>添加</h2>
 @using (Html.BeginForm())
 {
-  @Html.TextBoxFor(record=>record.Content)
+  @Html.TextBoxFor(record=>record.Name)
     <input type="submit" value="保存"/>
 }

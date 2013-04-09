@@ -8,12 +8,12 @@ using TargetMvcApplication.Models;
 
 namespace TargetMvcApplication.Controllers
 {
-    public class RecordController : Controller
+    public class ClassController : Controller
     {
         public ActionResult Index()
         {
             var context = new TargetMvcApplicationContext();
-            return View(context.Records);
+            return View(context.Classes);
         }
         
         public ActionResult Create()
@@ -22,12 +22,12 @@ namespace TargetMvcApplication.Controllers
         } 
         
         [HttpPost]
-        public ActionResult Create(Record record)
+        public ActionResult Create(Class @class)
         {
             try
             {
                 var context = new TargetMvcApplicationContext();
-                context.Records.Add(record);
+                context.Classes.Add(@class);
                 context.SaveChanges();
 
                 return RedirectToAction("Index");
