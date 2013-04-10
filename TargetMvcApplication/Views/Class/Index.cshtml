@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<TargetMvcApplication.Models.Class>
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "班级列表";
     Layout = "../Shared/_Layout.cshtml";
 }
 
-<h2>列表</h2>
+<h2>班级列表</h2>
 @Html.ActionLink("创建","Create")
 <br/>
-@foreach (var record in Model)
+@foreach (var sclass in Model)
 {
-    <p>@record.Id @record.Name</p>
+    <p>@sclass.Id @sclass.Name @Html.ActionLink("班级详情","Details",new {id=sclass.Id},null)</p>
 }

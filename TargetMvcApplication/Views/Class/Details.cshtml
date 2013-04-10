@@ -1,0 +1,12 @@
+﻿@model TargetMvcApplication.Models.Class
+
+@{
+    ViewBag.Title = "班级详情";
+    Layout = "../Shared/_Layout.cshtml";
+}
+<h2>班级详情</h2>
+@Html.ActionLink("添加学生", "Create","Student", new {id = Model.Id}, null)
+@foreach (var student in Model.Students)
+{
+    <p>@student.Name @student.Number</p>
+}

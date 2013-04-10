@@ -1,0 +1,17 @@
+﻿@model TargetMvcApplication.Models.Student
+
+@{
+    ViewBag.Title = "添加班级";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>添加班级</h2>
+@using (Html.BeginForm())
+{
+    @Html.Label("姓名")
+    @Html.TextBoxFor(record => record.Name)
+    <br/>
+    @Html.Label("学号")
+    @Html.TextBoxFor(record => record.Number)
+    <input type="submit" value="保存"/>
+}

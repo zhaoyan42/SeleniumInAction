@@ -15,6 +15,13 @@ namespace TargetMvcApplication.Controllers
             var context = new TargetMvcApplicationContext();
             return View(context.Classes);
         }
+
+        public ActionResult Details(int id)
+        {
+            var context = new TargetMvcApplicationContext();
+            var @class= context.Classes.Find(id);
+            return View(@class);
+        }
         
         public ActionResult Create()
         {
