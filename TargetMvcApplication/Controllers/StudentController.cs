@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TargetMvcApplication.Context;
 using TargetMvcApplication.Models;
+using TargetMvcApplication.Presentation.ApplicationServices;
 
 namespace TargetMvcApplication.Controllers
 {
@@ -26,10 +26,9 @@ namespace TargetMvcApplication.Controllers
         {
             try
             {
-                var context = new TargetMvcApplicationContext();
-                context.Classes.Find(id).Students.Add(student);
-                context.SaveChanges();
-                return RedirectToAction("Index","Class");
+                var service = new ClassService();
+                service.add_student(id,student);
+                return RedirectToAction("Details","Class",new{id});
             }
             catch
             {

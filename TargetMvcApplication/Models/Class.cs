@@ -1,14 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace TargetMvcApplication.Models
 {
     public class Class
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public virtual ICollection<Student> Students { get; set; }
+        private IList<Student> students;
+
+        public Class()
+        {
+        }
+
+        public virtual int Id { get; set; }
+        public virtual string Name { get; set; }
+
+        public virtual IEnumerable<Student> Students
+        {
+            get { return students; }
+        }
+
+        public virtual void add_student(Student student)
+        {
+            students.Add(student);
+        }
     }
 }

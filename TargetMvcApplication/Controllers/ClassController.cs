@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TargetMvcApplication.Context;
 using TargetMvcApplication.Models;
+using TargetMvcApplication.Presentation.ApplicationServices;
 
 namespace TargetMvcApplication.Controllers
 {
@@ -12,14 +12,14 @@ namespace TargetMvcApplication.Controllers
     {
         public ActionResult Index()
         {
-            var context = new TargetMvcApplicationContext();
-            return View(context.Classes);
+            var service = new ClassService();
+            return View(service.get_all_classes());
         }
 
         public ActionResult Details(int id)
         {
-            var context = new TargetMvcApplicationContext();
-            var @class= context.Classes.Find(id);
+            var service = new ClassService();
+            var @class= service.get_class(id);
             return View(@class);
         }
         
@@ -33,9 +33,8 @@ namespace TargetMvcApplication.Controllers
         {
             try
             {
-                var context = new TargetMvcApplicationContext();
-                context.Classes.Add(@class);
-                context.SaveChanges();
+                var service = new ClassService();
+                service.create_class(@class);
 
                 return RedirectToAction("Index");
             }

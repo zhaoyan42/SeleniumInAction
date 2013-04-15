@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TargetMvcApplication.Context;
+using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg.Db;
+using TargetMvcApplication.Repositories.NHibernate;
 
 namespace TargetMvcApplication.Controllers
 {
@@ -15,9 +18,7 @@ namespace TargetMvcApplication.Controllers
 
         public ActionResult Index()
         {
-            Database.Delete("TargetMvcApplicationContext");
-            var context = new TargetMvcApplicationContext();
-            context.Database.Initialize(true);
+            SessionProvider.Instance.initilizae();
             return View();
         }
 
