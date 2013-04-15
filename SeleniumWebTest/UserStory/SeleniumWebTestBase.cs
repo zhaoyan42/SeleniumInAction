@@ -18,7 +18,7 @@ namespace SeleniumWebTest.UserStory
             () =>
             {
                 driver = new FirefoxDriver();
-                base_url = "http://localhost:63928/";
+                base_url = "http://localhost:63928";
                 verification_errors = new StringBuilder();
 
                 //清空数据库

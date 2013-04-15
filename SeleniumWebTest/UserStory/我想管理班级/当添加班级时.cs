@@ -10,7 +10,7 @@ namespace SeleniumWebTest.UserStory.我想管理班级
             () =>
             {
                 //访问班级列表
-                driver.Navigate().GoToUrl(base_url + "Class");
+                driver.Navigate().GoToUrl(base_url + "/Class");
                 //点击创建按钮
                 driver.FindElement(By.CssSelector("a[href='/Class/Create']")).Click();
                 //填入班级名称
@@ -23,8 +23,8 @@ namespace SeleniumWebTest.UserStory.我想管理班级
             () =>
             {
                 //访问班级列表
-                driver.Navigate().GoToUrl(base_url + "Class");
-                //点击添加按钮
+                driver.Navigate().GoToUrl(base_url + "/Class");
+                //验证添加的班级在列表中
                 driver.FindElements(By.TagName("p")).Any(x => x.Text.Contains("班级1")).ShouldBeTrue();
             };
     }
