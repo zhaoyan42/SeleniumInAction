@@ -15,29 +15,22 @@ namespace TargetMvcApplication.Controllers
         public ActionResult Details(int id)
         {
             var service = new ClassService();
-            var @class= service.get_class(id);
+            var @class = service.get_class(id);
             return View(@class);
         }
-        
+
         public ActionResult Create()
         {
             return View();
-        } 
-        
+        }
+
         [HttpPost]
         public ActionResult Create(Class @class)
         {
-            try
-            {
-                var service = new ClassService();
-                service.create_class(@class);
+            var service = new ClassService();
+            service.create_class(@class);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
     }
 }

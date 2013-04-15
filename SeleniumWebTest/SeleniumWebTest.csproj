@@ -66,6 +66,7 @@
     <Compile Include="UserStory\我想管理班级\当添加班级时.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

@@ -12,24 +12,17 @@ namespace TargetMvcApplication.Controllers
         public ActionResult Create(int id)
         {
             return View();
-        } 
+        }
 
         //
         // POST: /Student/Create
 
         [HttpPost]
-        public ActionResult Create(int id,Student student)
+        public ActionResult Create(int id, Student student)
         {
-            try
-            {
-                var service = new ClassService();
-                service.add_student(id,student);
-                return RedirectToAction("Details","Class",new{id});
-            }
-            catch
-            {
-                return View();
-            }
+            var service = new ClassService();
+            service.add_student(id, student);
+            return RedirectToAction("Details", "Class", new {id});
         }
     }
 }

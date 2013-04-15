@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Arch.Repositories.NHibernate;
 using Machine.Specifications;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
@@ -21,7 +22,8 @@ namespace SeleniumWebTest.UserStory
                 verification_errors = new StringBuilder();
 
                 //清空数据库
-                driver.Navigate().GoToUrl(base_url + "ClearDatabase");
+                SessionProvider.Instance.IsBuildSchema = true;
+                SessionProvider.Instance.initilizae();
             };
 
         private Cleanup after_each =
