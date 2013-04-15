@@ -13,6 +13,7 @@ namespace TargetMvcApplication.Repositories.NHibernate
         private static ISessionFactory session_factory;
         private static SessionProvider _instance;
         private readonly object lock_flag = new object();
+        public bool IsBuildSchema { get; set; }
 
         private SessionProvider(Assembly assembly)
         {
@@ -44,8 +45,11 @@ namespace TargetMvcApplication.Repositories.NHibernate
                                       .ExposeConfiguration(c => c.SetProperty("current_session_context_class", "web"))
                                       .ExposeConfiguration(x =>
                                                            {
-                                                               new SchemaExport(x)
-                                                                   .Execute(true, true, false);
+                                                               if (IsBuildSchema)
+                                                               {
+                                                                   new SchemaExport(x)
+                                                                       .Execute(true, true, false);
+                                                               }
                                                            })
                                       .BuildSessionFactory();
         }

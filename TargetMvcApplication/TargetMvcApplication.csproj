@@ -76,7 +76,7 @@
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Presentation\ApplicationServices\ClassService.cs" />
-    <Compile Include="Repositories\NHibernate\NHibernateHelper.cs" />
+    <Compile Include="Repositories\NHibernate\SessionProvider.cs" />
     <Compile Include="Repositories\NHibernate\ORM\ClassMap.cs" />
     <Compile Include="Repositories\NHibernate\ORM\StudentMap.cs" />
     <Compile Include="Global.asax.cs">

@@ -18,6 +18,7 @@ namespace TargetMvcApplication.Controllers
 
         public ActionResult Index()
         {
+            SessionProvider.Instance.IsBuildSchema = true;
             SessionProvider.Instance.initilizae();
             return View();
         }
