@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
-using Arch.Repositories.NHibernate;
 using Machine.Specifications;
+using ORM.NHibernate.ORM;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 

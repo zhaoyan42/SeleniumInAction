@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using Arch.Repositories.NHibernate;
+using ORM.NHibernate.ORM;
 
 namespace TargetMvcApplication.Controllers
 {

@@ -1,7 +1,7 @@
-﻿using FluentNHibernate.Mapping;
-using TargetMvcApplication.Models;
+﻿using Domain;
+using FluentNHibernate.Mapping;
 
-namespace TargetMvcApplication.DBMaps
+namespace ORM.NHibernate
 {
     public class ClassMap:ClassMap<Class>
     {

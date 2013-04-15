@@ -76,13 +76,9 @@
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Presentation\ApplicationServices\ClassService.cs" />
-    <Compile Include="Repositories\NHibernate\ORM\ClassMap.cs" />
-    <Compile Include="Repositories\NHibernate\ORM\StudentMap.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Class.cs" />
-    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -157,9 +153,13 @@
     <Content Include="Views\Student\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Arch\Arch.csproj">
-      <Project>{22148454-13B7-49F0-A382-603EA47DA4C1}</Project>
-      <Name>Arch</Name>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{BA895528-3395-482E-B658-37A80EE56C71}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ORM\ORM.csproj">
+      <Project>{7E61B981-C7EA-49B4-A1FE-6DFD126C8B9F}</Project>
+      <Name>ORM</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

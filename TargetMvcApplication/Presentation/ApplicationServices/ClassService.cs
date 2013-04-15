@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Arch.Repositories.NHibernate;
+using Domain;
 using NHibernate;
-using TargetMvcApplication.Models;
+using ORM.NHibernate.ORM;
 
 namespace TargetMvcApplication.Presentation.ApplicationServices
 {

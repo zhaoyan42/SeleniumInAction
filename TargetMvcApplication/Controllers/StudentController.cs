@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using TargetMvcApplication.Models;
+using Domain;
 using TargetMvcApplication.Presentation.ApplicationServices;
 
 namespace TargetMvcApplication.Controllers

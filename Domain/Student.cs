@@ -1,4 +1,4 @@
-﻿namespace TargetMvcApplication.Models
+﻿namespace Domain
 {
     public class Student
     {

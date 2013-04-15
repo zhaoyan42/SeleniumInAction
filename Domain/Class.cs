@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TargetMvcApplication.Models
+namespace Domain
 {
     public class Class
     {
