@@ -62,12 +62,19 @@
   <ItemGroup>
     <Compile Include="Demo\测试百度.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserStory\当添加班级时.cs" />
+    <Compile Include="UserStory\SeleniumWebTestBase.cs" />
+    <Compile Include="UserStory\我想管理班级\当添加班级时.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Arch\Arch.csproj">
+      <Project>{22148454-13B7-49F0-A382-603EA47DA4C1}</Project>
+      <Name>Arch</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

@@ -4,7 +4,7 @@ using Machine.Specifications;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 
-namespace SeleniumWebTest
+namespace SeleniumWebTest.Demo
 {
     public class 测试百度
     {
