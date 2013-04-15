@@ -76,7 +76,6 @@
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Presentation\ApplicationServices\ClassService.cs" />
-    <Compile Include="Repositories\NHibernate\SessionProvider.cs" />
     <Compile Include="Repositories\NHibernate\ORM\ClassMap.cs" />
     <Compile Include="Repositories\NHibernate\ORM\StudentMap.cs" />
     <Compile Include="Global.asax.cs">
@@ -157,7 +156,12 @@
   <ItemGroup>
     <Content Include="Views\Student\Create.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Arch\Arch.csproj">
+      <Project>{22148454-13B7-49F0-A382-603EA47DA4C1}</Project>
+      <Name>Arch</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

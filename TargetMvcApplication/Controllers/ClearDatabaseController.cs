@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using FluentNHibernate.Cfg;
-using FluentNHibernate.Cfg.Db;
-using TargetMvcApplication.Repositories.NHibernate;
+﻿using System.Web.Mvc;
+using Arch.Repositories.NHibernate;
 
 namespace TargetMvcApplication.Controllers
 {

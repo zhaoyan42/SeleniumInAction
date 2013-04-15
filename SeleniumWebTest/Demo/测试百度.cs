@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Text;
 using Machine.Specifications;
-using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 
