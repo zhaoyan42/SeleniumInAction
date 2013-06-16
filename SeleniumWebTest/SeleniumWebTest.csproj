@@ -60,7 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="测试百度.cs" />
+    <Compile Include="作为\用户\我想\搜索指定文本\从而\找到需要的结果\搜索指定文本.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
