@@ -1,0 +1,13 @@
+﻿@model Domain.Class
+
+@{
+    ViewBag.Title = "添加班级";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>添加班级</h2>
+@using (Html.BeginForm())
+{
+  @Html.TextBoxFor(record=>record.Name)
+    <input type="submit" value="保存"/>
+}
